@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- VENDORS FORM -->
+    <record id="res_partner_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+         <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="category_type" />
+                <field name="account_status" />
+                <field name="approval_status" />
+                <field name="last_date_reviewed" />
+                <field name="account_number" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
